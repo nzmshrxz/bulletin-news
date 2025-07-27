@@ -2,10 +2,10 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Home() {
   const router = useRouter();
-
   const [articles, setArticles] = useState([
     // {
     //   title: "Global Tech Summit 2025 Begins in Silicon Valley",
@@ -50,7 +50,8 @@ export default function Home() {
         transition={{ duration: 1 }}
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-700 dark:text-gray-100 py-40 px-4 text-center"
       >
-        <h1 className="text-5xl font-bold mb-4">Welcome to BulletinNews</h1>
+        <h1 className="text-5xl font-bold mb-4">Welcome to BulletinNews
+        </h1>
         <p className="text-lg max-w-2xl mx-auto">
           Your trusted source for the latest headlines and breaking news across the globe.
         </p>
