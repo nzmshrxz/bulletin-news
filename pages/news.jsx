@@ -27,7 +27,7 @@ export default function NewsPage() {
       setIsLoading(true)
       try {
         const response = await axios.get(
-          "https://newsapi.org/v2/everything?q=keyword&language=en&apiKey=2bf2f9d82ec544d3ab76645b8359de4c"
+          "/api/news"
         );
         setArticles(response.data.articles); // fetch more than 3
       } catch (error) {
@@ -43,6 +43,11 @@ export default function NewsPage() {
     setCategory(newCateogry)
     setCurrentPage(1)
   }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
 
   return (
     <>

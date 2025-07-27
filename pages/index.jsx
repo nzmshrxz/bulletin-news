@@ -28,7 +28,7 @@ export default function Home() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=2bf2f9d82ec544d3ab76645b8359de4c");
+        const response = await axios.get("/api/news");
         setArticles(response.data.articles.slice(0, 3));
       } catch (error) {
         console.error("Error fetching news:", error);
