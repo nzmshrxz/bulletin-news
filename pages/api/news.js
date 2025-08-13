@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   const { keyword = 'india' } = req.query; // default if none provided
 
   const apiKey = process.env.NEWS_API_KEY;
-  const url = `https://newsapi.org/v2/everything?q=${keyword}&language=en&apiKey=2bf2f9d82ec544d3ab76645b8359de4c`;
+  const url = `https://newsapi.org/v2/everything?q=${keyword}&language=en&apiKey=${apiKey}`;
 
   try {
     const response = await fetch(url);
