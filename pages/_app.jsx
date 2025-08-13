@@ -25,11 +25,11 @@ function MyApp({ Component, pageProps, router }) {
             >
               <NewsHero />
               <Component {...pageProps} />
+          <Footer/>
             </motion.div>
           </AnimatePresence>
 
           {/* <Navbar /> */}
-          {/* <Footer/> */}
         </AuthProvider>
       </ThemeProvider>
     </>

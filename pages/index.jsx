@@ -151,7 +151,6 @@ export default function Home() {
       </section>
       <LatestNews articles={articles} />
       <Newses articles={articles}/>
-      <Footer/>
     </div>
   );
 }

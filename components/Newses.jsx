@@ -11,7 +11,7 @@ export default function Newses({ articles = [] }) {
     : allTrendingArticles.slice(0, 3);
 
   return (
-    <aside className="xl:col-span-4 max-w-[550px] lg:max-w-[1450px] mx-auto bg-white rounded-sm p-10 text-black text-xs font-sans">
+    <aside className="xl:col-span-4 max-w-[370px] md:max-w-[700px]  sm:max-w-[600px] lg:max-w-[1450px] mx-auto bg-white rounded-sm p-10 text-black text-xs font-sans">
       <div className="flex justify-between items-center mb-3">
         <h3 className="font-semibold text-sm">Trending Headlines</h3>
         <button
